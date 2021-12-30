@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <!-- Web App Config -->
+    <title>ChromeDrop</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#3367d6">
+    <meta name="color-scheme" content="dark light">
+    <meta name="apple-mobile-web-app-capable" content="no">
+    <meta name="apple-mobile-web-app-title" content="ChromeDrop">
+    <!-- Descriptions -->
+    <meta name="description" content="Instantly share images, videos, PDFs, and links with people nearby. Peer2Peer and Open Source. No Setup, No Signup.">
+    <meta name="keywords" content="File, Transfer, Share, Peer2Peer">
+    <meta property="og:title" content="ChromeDrop">
+    <meta property="og:type" content="article">
+    <meta name="og:description" content="Instantly share images, videos, PDFs, and links with people nearby. Peer2Peer and Open Source. No Setup, No Signup.">
+    <!-- Icons -->
+    <link rel="icon" sizes="96x96" href="images/favicon-96x96.png">
+    <!-- Resources -->
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+
+<body translate="no">
+    <div id="serverInfo"></div>
+
+    <div class="toast-container full center">
+        <x-toast class="row" shadow="1" id="toast">File Transfer Completed</x-toast>
+    </div>
+    <!-- Scripts -->
+    <script src="scripts/clipboard.js" async></script>
+    <script src="sha1.js"></script>
+    <script src="http.js"></script>
+    <script src="ua-parser.js"></script>
+    <script src="scripts/network.js"></script>
+    <script src="scripts/ui.js"></script>
+    <script src="index.js"></script>
+    <!-- no script -->
+    <noscript>
+        <x-noscript class="full center column">
+            <h1>Enable JavaScript</h1>
+            <h3>ChromeDrop works only with JavaScript</h3>
+        </x-noscript>
+        <style>
+        x-noscript {
+            background: #599cfc;
+            color: white;
+            z-index: 2;
+        }
+
+        a[href="#info"] {
+            color: white;
+        }
+        </style>
+    </noscript>
+</body>

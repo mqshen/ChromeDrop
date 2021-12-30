@@ -1,0 +1,120 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+body {
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+}
+
+#log {
+  -webkit-box-flex: 1;
+}
+
+#log,
+#input {
+  display: block;
+}
+
+
+.input-group {
+  display: table;
+  border: 1px solid #30363d;
+  border-radius: 6px;
+  width: 500px;
+  margin-bottom: 10px;
+}
+.input-group button {
+  border: none;
+  background: none;
+  width: 100%;
+}
+
+
+.input-group .form-control:first-child, .input-group-button:first-child .btn {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.input-group .form-control, .input-group-button {
+  display: table-cell;
+  border-left: 1px solid #30363d;
+}
+.input-group .form-control {
+  position: relative;
+  width: 100%;
+}
+.input-sm {
+  min-height: 28px;
+}
+.color-bg-subtle {
+  background-color: var(--color-canvas-subtle) !important;
+}
+.input-monospace {
+  font-family: ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,Liberation Mono,monospace;
+}
+.input-sm {
+  min-height: 28px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  font-size: 12px;
+  line-height: 20px;
+}
+.form-control, .form-select {
+  padding: 5px 12px;
+  font-size: 18px;
+  line-height: 30px;
+  color: var(--color-fg-default);
+  vertical-align: middle;
+  background-color: var(--color-canvas-default);
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+  border: 1px solid var(--color-border-default);
+  border-radius: 6px;
+  outline: none;
+  box-shadow: var(--color-primer-shadow-inset);
+}
+input, select, textarea, button {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+button, input {
+  overflow: visible;
+}
+button, input, select, textarea {
+  font: inherit;
+  margin: 0;
+}
+* {
+  box-sizing: border-box;
+}
+input[type="text" i] {
+  padding: 3px 8px;
+}
+input {
+  -webkit-writing-mode: horizontal-tb !important;
+  text-rendering: auto;
+  color: -internal-light-dark(black, white);
+  letter-spacing: normal;
+  word-spacing: normal;
+  line-height: normal;
+  text-transform: none;
+  text-indent: 0px;
+  text-shadow: none;
+  display: inline-block;
+  text-align: start;
+  appearance: auto;
+  -webkit-rtl-ordering: logical;
+  cursor: text;
+  background-color: -internal-light-dark(rgb(255, 255, 255), rgb(59, 59, 59));
+  margin: 0em;
+  padding: 1px 2px;
+  border-width: 2px;
+  border-style: inset;
+  border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+  border-image: initial;
+}

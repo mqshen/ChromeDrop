@@ -1,0 +1,31 @@
+{
+  "name": "ChromeDrop",
+  "description": "Instantly share images, videos, PDFs, and links with people nearby. Peer2Peer and Open Source. No Setup, No Signup..",
+  "version": "0.1.0",
+  "manifest_version": 2,
+
+  "icons": {
+    "128": "logo.png"
+  },
+
+  "sockets": {
+    "tcp": {
+      "connect": "*"
+    },
+
+    "tcpServer": {
+      "listen": "*"
+    }
+  },
+
+  "permissions": [
+    "storage",
+    "system.network"
+  ],
+
+  "app": {
+    "background": {
+      "scripts": ["background.js"]
+    }
+  }
+}
