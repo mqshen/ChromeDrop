@@ -374,7 +374,7 @@ class PeersManager {
         this._server = serverConnection;
         Events.on('signal', this._onMessage.bind(this));
         Events.on('peer-joined', this._onPeerJoin.bind(this));
-        Events.on('peers', this._onPeers.bind(this));
+        // Events.on('peers', this._onPeers.bind(this));
         Events.on('files-selected', this._onFilesSelected.bind(this));
         Events.on('send-text', this._onSendText.bind(this));
         Events.on('peer-left', this._onPeerLeft.bind(this));
@@ -529,16 +529,6 @@ class FileDigester {
         });
     }
 
-}
-
-class Events {
-    static fire(type, detail) {
-        window.dispatchEvent(new CustomEvent(type, { detail: detail }));
-    }
-
-    static on(type, callback) {
-        return window.addEventListener(type, callback, false);
-    }
 }
 
 

@@ -173,7 +173,7 @@ class ChromdropServer {
 
 class NodePeer {
 
-  constructor(socket, request, peerId, callback) {
+  constructor(socket, request, peerId) {
       // set socket
       this.socket = socket;
       this.id = peerId;
@@ -185,49 +185,7 @@ class NodePeer {
       this.timerId = 0;
       this.lastBeat = Date.now();;
       
-
-    //   var self = this
-    //   chrome.sockets.tcp.getInfo(
-    //     socket.pSocket_.socketId,
-    //     (socketInfo) => { 
-    //       self._setIP(request, socketInfo);
-
-    //       self.rtcSupported = request.headers.url.indexOf('webrtc') > -1;
-    //       // set name 
-    //       self._setName(request);
-    //       // for keepalive
-    //       self.timerId = 0;
-    //       self.lastBeat = Date.now();
-    //       callback(self)
-    //     },
-    //   )
-
-
-      // set remote ip
-      // this._setIP(request);
-
-      // // set peer id
-      // this._setPeerId(request)
-      // // is WebRTC supported ?
-      // this.rtcSupported = request.url.indexOf('webrtc') > -1;
-      // // set name 
-      // this._setName(request);
-      // // for keepalive
-      // this.timerId = 0;
-      // this.lastBeat = Date.now();
   }
-
-//   _setIP(request, socketInfo) {
-//       if (request.headers['x-forwarded-for']) {
-//           this.ip = request.headers['x-forwarded-for'].split(/\s*,\s*/)[0];
-//       } else {
-//           this.ip = socketInfo.peerAddress;
-//       }
-//       // IPv4 and IPv6 use different values to refer to localhost
-//       if (this.ip == '::1' || this.ip == '::ffff:127.0.0.1') {
-//           this.ip = '127.0.0.1';
-//       }
-//   }
 
   _setPeerId(request) {
       if (request.peerId) {
@@ -265,13 +223,6 @@ class NodePeer {
           deviceName = 'Unknown Device';
 
       const displayName = deviceName;
-      // uniqueNamesGenerator({
-      //     length: 2,
-      //     separator: ' ',
-      //     dictionaries: [colors, animals],
-      //     style: 'capital',
-      //     seed: this.id.hashCode()
-      // })
 
       this.name = {
           model: ua.device.model,
@@ -409,8 +360,6 @@ chrome.system.network.getNetworkInterfaces(function(interfaces){
         }
     }
 
-    var serverAddress = ""
-    console.log(interfaces);
 });
 
 
